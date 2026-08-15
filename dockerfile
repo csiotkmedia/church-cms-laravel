@@ -68,7 +68,7 @@ COPY custompackages ./custompackages
 # ---------------------------------------------------------
 # Validate Composer configuration
 # ---------------------------------------------------------
-RUN composer validate --no-check-publish
+RUN composer validate --no-check-publish --no-check-lock
 
 # ---------------------------------------------------------
 # Install PHP dependencies
