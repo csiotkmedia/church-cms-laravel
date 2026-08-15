@@ -52,11 +52,13 @@ RUN curl -fsSL https://deb.nodesource.com/setup_22.x | bash - \
 COPY . /var/www/html
 
 # PHP dependencies
-RUN composer install \
-    --no-interaction \
-    --prefer-dist \
-    --optimize-autoloader \
-    --no-dev
+RUN composer diagnose \
+    && composer install \
+        --no-interaction \
+        --prefer-dist \
+        --optimize-autoloader \
+        --no-dev \
+        -vvv
 
 # JavaScript dependencies
 RUN npm install
