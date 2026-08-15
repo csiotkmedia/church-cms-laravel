@@ -82,7 +82,9 @@ RUN composer install \
     --no-interaction \
     --prefer-dist \
     --optimize-autoloader \
-    --no-dev
+    --no-dev \
+    --no-progress \
+    -vvv
 
 # ---------------------------------------------------------
 # Copy application
